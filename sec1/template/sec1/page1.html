@@ -1,6 +1,12 @@
-<ul>
+{% if all_departments %}
 
+<ul>
+<h3> dept names</h3>
 	{%for dept in all_departments%}
-	<li><a href="/sec1/{{Department.id}}/">{{Dept_name}} </a></li>
+	<li><a href="/sec1/{{dept.id}}/">{{dept.Dept_name}} </a></li></br>
 	{%endfor %}
 </ul>
+
+{%else%}
+	<h1>no display</h1>
+{%endif%}
